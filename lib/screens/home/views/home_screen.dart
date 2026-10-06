@@ -47,6 +47,7 @@ class HomeScreen extends StatelessWidget {
             return Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
+                boxShadow(offset: Offset(3, 3)),
               ),
             );
           },
