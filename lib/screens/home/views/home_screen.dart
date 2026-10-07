@@ -38,8 +38,8 @@ class HomeScreen extends StatelessWidget {
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
+            crossAxisSpacing: 16,
+            mainAxisSpacing: 16,
             childAspectRatio: 9 / 16,
           ),
           itemCount: 4,
@@ -47,8 +47,15 @@ class HomeScreen extends StatelessWidget {
             return Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                boxShadow(offset: Offset(3, 3)),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.white,
+                    blurRadius: 5,
+                    offset: Offset(3, 3),
+                  ),
+                ],
               ),
+              child: Column(children: [Image.asset('assets/1.png')]),
             );
           },
         ),
