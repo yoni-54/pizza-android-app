@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -89,7 +90,28 @@ class DetailsScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Row(children: [Expanded(child: child)]),
+                    const SizedBox(height: 12),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(20),
+                              boxShadow: const [
+                                BoxShadow(offset: Offset(2, 2), blurRadius: 5),
+                              ],
+                            ),
+                            child: const Column(
+                              children: [
+                                Icon(CupertinoIcons.airplane),
+                                Text('467 Calories'),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
