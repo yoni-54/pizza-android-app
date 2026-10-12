@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pizza_app/components/macro.dart';
 
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key});
@@ -91,25 +92,15 @@ class DetailsScreen extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 12),
-                    Row(
+                    const Row(
                       children: [
-                        Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20),
-                              boxShadow: const [
-                                BoxShadow(offset: Offset(2, 2), blurRadius: 5),
-                              ],
-                            ),
-                            child: const Column(
-                              children: [
-                                Icon(CupertinoIcons.airplane),
-                                Text('467 Calories'),
-                              ],
-                            ),
-                          ),
-                        ),
+                        MyMacroWidget(title: "Calories", value: 267),
+                        SizedBox(width: 10),
+                        MyMacroWidget(title: "Protein", value: 36),
+                        SizedBox(width: 10),
+                        MyMacroWidget(title: "Fat", value: 21),
+                        SizedBox(width: 10),
+                        MyMacroWidget(title: "Carbs", value: 38),
                       ],
                     ),
                   ],
