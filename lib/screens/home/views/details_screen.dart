@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pizza_app/components/macro.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -94,14 +95,54 @@ class DetailsScreen extends StatelessWidget {
                     const SizedBox(height: 12),
                     const Row(
                       children: [
-                        MyMacroWidget(title: "Calories", value: 267),
+                        MyMacroWidget(
+                          title: "Calories",
+                          value: 267,
+                          icon: FontAwesomeIcons.fire,
+                        ),
                         SizedBox(width: 10),
-                        MyMacroWidget(title: "Protein", value: 36),
+                        MyMacroWidget(
+                          title: "Protein",
+                          value: 36,
+                          icon: FontAwesomeIcons.dumbbell,
+                        ),
                         SizedBox(width: 10),
-                        MyMacroWidget(title: "Fat", value: 21),
+                        MyMacroWidget(
+                          title: "Fat",
+                          value: 21,
+                          icon: FontAwesomeIcons.oilWell,
+                        ),
                         SizedBox(width: 10),
-                        MyMacroWidget(title: "Carbs", value: 38),
+                        MyMacroWidget(
+                          title: "Carbs",
+                          value: 38,
+                          icon: FontAwesomeIcons.breadSlice,
+                        ),
                       ],
+                    ),
+                    const SizedBox(height: 40),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      height: 50,
+                      child: TextButton(
+                        onPressed: () {},
+                        style: TextButton.styleFrom(
+                          elevation: 3.0,
+                          backgroundColor: Colors.black,
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                        child: const Text(
+                          "Buy Now",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
                     ),
                   ],
                 ),
