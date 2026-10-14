@@ -1,3 +1,7 @@
+import 'package:pizza_repository/src/entities/macros_entity.dart';
+
+import '../models/models.dart';
+
 class PizzaEntity {
   String pizzaId;
   String picture;
@@ -7,7 +11,7 @@ class PizzaEntity {
   String description;
   double price;
   double discount;
-  List<Macros> macros;
+  Macros macros;
 
   PizzaEntity({
     required this.pizzaId,
@@ -31,7 +35,7 @@ class PizzaEntity {
       'description': description,
       'price': price,
       'discount': discount,
-      'macros': macros.map((e) => null),
+      'macros': macros.toEntity().toDocument(),
     };
   }
 
@@ -45,7 +49,7 @@ class PizzaEntity {
       description: doc['description'],
       price: doc['price'],
       discount: doc['discount'],
-      macros: doc['macros'],
+      macros: Macros.fromEntity(MacrosEntity.fromDocument(doc['macros'])),
     );
   }
 }
